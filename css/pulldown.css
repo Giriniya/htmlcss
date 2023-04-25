@@ -10,12 +10,32 @@ ul a{display: block; padding: 10px;}
 ul{width:600px; margin:auto;}
 ul>li{float: left;}
 /* ul{overflow: hidden;} */
-ol{display: none; position: absolute;}
-ul>li:hover{background: orange;}
-ul>li:hover>ol{display:block;}
+ol{
+    /* display: none; */
+     position: absolute;
+    visibility: hidden;
+    opacity: 0;}
+
+
+ul>li:hover{background: orange;
+}
+
+ul>li:hover>ol{
+    /* display:block; */
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;}
+    
+ol>li{height: 0;}
+ul>li:hover>ol>li{height: 41px; transition:0.51s;}
+
+
 ol>li{background: tomato;}
+
 ul>li{position: relative;}
+
 /* ul{height: 100px;} */
+
 ul:after{content:'';display:block; clear:both;}
 ol{width:100%;}
 ol>li:hover{background-color: lightgray;}
@@ -35,16 +55,26 @@ ol>li>a:hover:before{
 }
 
 /* 메인메뉴에 hover효과주기 */
-ul>li>a{position:relative;}
+ul>li>a{position:relative;
+    margin:0 auto;
+    text-align: center;
+}
 ul>li>a:after{
     content:" "; 
-    display: block;
+    display:block;
     width:0;
-    left:0; bottom: 0;
+    left:50%;
+    bottom: 0;
     height:5px; background: blue;
-position: absolute;}
+    transition:all .3s;
+    position: absolute;}
 
     ul>li>a:hover:after{
         width:100%;
+        left:0;
         transition:0.5s;
     }
+
+    /* 문제:메인메뉴에 라인이 현재 좌측에서 우측으로 
+    width:0 ->100%로 커지고 있다. 기획안 변경 
+    라인이 중앙에서 양쪽으로 커졌으면 좋겠다. */

@@ -1,0 +1,41 @@
+ul{ width: 200px;
+    overflow: hidden;
+    margin: 10px auto;
+
+}
+.menu>li{
+   
+    float: left;
+    background: rgb(130, 81, 130);
+    width:100%;
+    text-align: center;
+    line-height: 40px;
+    padding:1px;
+
+}
+
+.menu>li:hover{
+    background: rgb(75, 9, 75);
+    transition: 1s;
+}
+.submenu>li{
+    line-height:50px ;
+    background: pink;
+}
+
+.menu a {
+    color: #fff;
+  }
+
+  .submenu {
+    height: 0; 
+    overflow: hidden;
+  }
+
+  .menu > li:hover .submenu {
+    height: 250px; 
+    transition-duration: 1s;}
+
+
+  
+
