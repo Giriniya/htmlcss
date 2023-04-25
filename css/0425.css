@@ -1,0 +1,27 @@
+.box{
+    width:100px; 
+    height: 100px;
+    border:1px solid black;}
+
+#box1{margin: 10px 20px;}
+#box2{margin: 20px 40px;}
+#box3{margin: 30px 60px;}
+
+#mama{
+    width: 95%; 
+    border: 5px solid red; 
+    margin: auto;
+    /* max-width: 1000px;
+    min-width: 700px; */
+}
+
+#mama p{
+    border: 5px solid blue; 
+    width:auto;
+    width:100%;
+/* 부모의 가로크기에 width에 100%로 맞춘다 */
+box-sizing: border-box;
+/* box-sizing: content-box; */
+padding: 20px 50px;
+}
+
