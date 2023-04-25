@@ -1,0 +1,35 @@
+.borderimg{
+    border:10px solid transparent;
+    padding:10px;
+    border-image: url(../imgs/border1.png) 30 round;
+    margin:30px;
+}
+
+.borderimg:hover{
+    border-image: url(../imgs/border1.png)30 repeat;
+}
+.borderimg:active{
+    border-image: url(../imgs/border1.png)30 space;
+}
+
+.borderimg2{
+    border:10px solid transparent;
+    padding:10px;
+    border-image:url(../imgs/border2.png)25 stretch;
+    margin:30px;
+}
+
+.borderimg3{
+    border:50px solid transparent;
+    padding:20px;
+    border-image:url(../imgs/border3.png) 50 round;
+    margin:30px;
+    height: 100px;
+}
+
+.borderimg4{
+    border:20px solid transparent;
+    padding:20px;
+    border-image:url(../imgs/dog.PNG) 20 round;
+    margin:30px;
+}

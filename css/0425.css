@@ -25,3 +25,69 @@ box-sizing: border-box;
 padding: 20px 50px;
 }
 
+#box1{border:5px solid black;
+border-width: 10px;
+border-left-style:dashed;
+border-right-color: red;
+border-top-style: double;
+border-bottom-width:20px;
+border-bottom-color: orange;
+/* border-width:thick thin medium */
+}
+
+#box2{
+    width:1px; height:1px;
+    border:50px solid;
+    border-left-color: red;
+    border-right-color: blue;
+    border-top-color: orange;
+    border-bottom-color: pink;
+}
+
+#box2:hover{
+    border-left-color:gold;
+    border-right-color: gold;
+}
+
+#box2:active{
+    border-top-color: red;
+    border-bottom-color: red;
+}
+#box3{
+    border:5px solid blue;
+    outline:5px solid red;
+    outline-offset: 10px;
+}
+
+#box3:hover{
+    outline:10px dashed red 20px;
+/*outline-offset: 10px;
+outline-style: dotted;
+outline-width:10px;
+outline-color: orange;*/}
+
+#box3{
+    border-radius: 30px;
+    border-top-right-radius: 50px;
+border-radius: 10px 20px 30px 40px;
+    border-radius: 50%;}
+
+
+#mama p{
+    font-size: 30px;
+    text-stroke:3px red;
+    -webkit-text-stroke:1px red;
+}
+
+#mama p:hover{
+    -webkit-text-stroke: 1px blue;
+    /* vendor prefix */
+    cursor: pointer;
+}
+
+input, button{
+    padding:10px;
+    /* border:0; */
+    /* outline:0; */
+    all:unset;
+}
