@@ -1,0 +1,50 @@
+/* 1. a태그는 블럭처리한다.
+2. ul>li 메인메뉴는 float처리한다.
+3. ul 메인박스는 float해제한다.
+4. 서브메뉴 ol은 숨김처리한다.
+5. 메인메뉴 li에 hover효과로 서브메뉴를 보이게한다
+6. position 처리한다.(기획의도에 따라 다르다)
+7.동적인 효과 UI기능을 개선 */
+
+ul a{display: block; padding: 10px;}
+ul{width:600px; margin:auto;}
+ul>li{float: left;}
+/* ul{overflow: hidden;} */
+ol{display: none; position: absolute;}
+ul>li:hover{background: orange;}
+ul>li:hover>ol{display:block;}
+ol>li{background: tomato;}
+ul>li{position: relative;}
+/* ul{height: 100px;} */
+ul:after{content:'';display:block; clear:both;}
+ol{width:100%;}
+ol>li:hover{background-color: lightgray;}
+
+/* UI 기능 개선작업 */
+ol>li>a::before{
+    content:'';
+    width:0px; height: 100%;
+    display: block;
+    background: blue;
+    position: absolute;
+    left: 0; top: 0;
+}
+ol>li>a{position: relative;}
+ol>li>a:hover:before{
+    width:5px; transition:0.2s;
+}
+
+/* 메인메뉴에 hover효과주기 */
+ul>li>a{position:relative;}
+ul>li>a:after{
+    content:" "; 
+    display: block;
+    width:0;
+    left:0; bottom: 0;
+    height:5px; background: blue;
+position: absolute;}
+
+    ul>li>a:hover:after{
+        width:100%;
+        transition:0.5s;
+    }
