@@ -1,26 +1,27 @@
-ul{ width: 200px;
+ul{ width: 250px;
     overflow: hidden;
-    margin: 10px auto;
+   
+    
 
 }
 .menu>li{
    
     float: left;
-    background: rgb(130, 81, 130);
+    background: green;
     width:100%;
     text-align: center;
     line-height: 40px;
-    padding:1px;
+    /* padding:1px; */
 
 }
 
 .menu>li:hover{
-    background: rgb(75, 9, 75);
+    background: rgb(45, 205, 77);
     transition: 1s;
 }
 .submenu>li{
     line-height:50px ;
-    background: pink;
+    background: rgb(166, 237, 177);
 }
 
 .menu a {
@@ -36,6 +37,9 @@ ul{ width: 200px;
     height: 250px; 
     transition-duration: 1s;}
 
+    body{background: rgb(206, 242, 151);}
+    
+img{ width: 250px; height: 200px;}
 
   
 
