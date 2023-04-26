@@ -1,0 +1,127 @@
+.box{width:100px; height: 100px;
+    background-color: red;
+    position:absolute;
+    left:0; top:50px;
+}
+.box:nth-of-type(1){
+    background-color: red;
+    left:0px; top:50px;
+}
+.box:nth-of-type(2){
+    background-color: blue;
+    left:50px; top:100px;
+}
+.box:nth-of-type(3){
+    background-color: orange;
+    left:100px; top:150px;
+}
+
+/* 마지막에 입력한 요소가 맨앞으로 올라간다. */
+.box:nth-of-type(1):hover{
+    z-index: 1;
+}
+/* 숫자가 높으면 위로 올라간다 */
+.box:nth-of-type(2):hover{
+    z-index: 2;
+}
+
+.wrap{
+    border:1px solid red;
+    position: relative;
+    width:500px; height: 200px;
+    overflow-x:scroll;
+    overflow-y:hidden;
+}
+
+.wrap:hover{
+    overflow:visible;
+}
+.wrap:active{
+    overflow: scroll;
+}
+
+.shadow{
+    width:400px; height: 100px;
+    border: 1px solid gray;
+    box-shadow: 5px 5px 5px 4px black;
+    margin:20px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.shadow:hover{
+    box-shadow: inset 5px 5px 5px 1px black;
+}
+
+.shadow:active{
+    box-shadow: inset 5px 5px 5px gold,
+    -10px -10px 10px 10px blueviolet,
+    15px 15px 20px orange;
+}
+
+.shadow{font-size:2em;
+text-shadow: 2px 2px 2px gold;}
+
+.shadow:hover{
+    text-shadow: 2px 2px 2px gold,
+    2px -5px 2px orange;
+}
+.shadow:active{
+    text-shadow: 2px 2px 2px gold,
+    -2px -5px 4px orange,
+    -2px -8px 6px red;
+    background-color: black;
+    color:white;
+}
+.sample{
+    border-style: solid;
+    border-width: 43px 29px 11px 26px;
+    -moz-border-image: url('../imgs/dog.PNG') 43 0 3 0 repeat repeat;
+    -webkit-border-image: url('../imgs/dog.PNG') 43 0 3 0 repeat repeat;
+    -o-border-image: url('../imgs/dog.PNG') 43 0 3 0 repeat repeat;
+    border-image: url('../imgs/dog.PNG') 43 0 3 0 repeat repeat;
+    height: 150px;}
+
+    bold  italic
+    Size
+    Vertical Size: 
+    16px
+    Horizontal Size: 
+    31px
+    Border
+    Border Radius: 
+    28px
+    Border Size: 
+    1px
+     Box Shadow
+     Text Shadow
+    Vertical Position: 
+    1px
+    Horizontal Position: 
+    0px
+    Blur Radius: 
+    0px
+     prefix<a href="#" class="myButton">green</a>
+    
+    .myButton {
+        background-color:#44c767;
+        border-radius:28px;
+        border:1px solid #18ab29;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:17px;
+        padding:16px 31px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #2f6627;
+    }
+    .myButton:hover {
+        background-color:#5cbf2a;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+    
