@@ -26,6 +26,7 @@ ul{ width: 250px;
 
 .menu a {
     color: #fff;
+    display: block;
   }
 
   .submenu {
@@ -41,5 +42,9 @@ ul{ width: 250px;
     
 img{ width: 250px; height: 200px;}
 
+.mm{ float: left;}
   
 
+.try>li{display: none;}
+
+.submenu:hover>ul{display: block;}

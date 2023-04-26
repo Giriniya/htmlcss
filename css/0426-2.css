@@ -88,6 +88,7 @@ h1{
 
     border:20px solid red;
     border-image: linear-gradient(gold 0%, silver 50%, red 100%) 20 stretch ;
+    -webkit-text-stroke:5px black;
 }
 /* 박스에 그라디언트를 주고 글자는 투명색을 주고 배경을 글자로 마스크를 씌운다 */
 

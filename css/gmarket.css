@@ -1,0 +1,64 @@
+ul{ width: 200px; margin:30px; text-indent:10px;}
+ul a{display: block; 
+    color: white !important;
+    padding:10px;
+}
+
+
+ul li{ background-color: rgb(28, 161, 28);}
+ul li:hover{background: white; 
+    text-indent: 15px;
+    transition: 0s;}
+ul li:hover>a{color:green !important; }
+ul>li{position: relative;}
+
+
+/* 2단계 */
+ol{     
+    position:absolute; 
+    left:100%; top:0;
+    width: 180px;   
+    /* opacity: 0;
+    visibility: hidden; */
+ }
+ol>li{ opacity: 0; float: left; }
+
+    ul>li:hover>ol>li{
+        height: 40px; opacity: 1;
+        transition: 0;
+        float: left; 
+        left:100%; top:0;
+        width: 180px; 
+    background: whitesmoke;
+text-decoration-color:black !important ; }
+    
+        
+
+
+/* 3단계 */
+dl>dt{background-color:white; padding: 10px; }
+dl>dd{background-color:white; padding:10px; }
+
+dl{ display: none;  left:100%; top:0;
+    position: absolute;}
+
+ol>li:hover>dl{display:block;  width:180px; left:100%; top:0; height: 20px;} 
+
+
+
+
+
+
+
+
+
+
+    /* 삼각형 블릿기호 달기 */
+/* ul>li>a{position: relative;}
+ul>li>a::after{content:''; display: block; position: absolute;
+width:0; height: 0; border:8px solid transparent;
+right:0; top:10px; border-left-color: gray;}
+
+ul>li>a:hover:after{content:''; display: block; position: absolute;
+    width:0; height: 0; border:8px solid transparent;
+    right:1px; top:8px; border-left-color: white;} */
