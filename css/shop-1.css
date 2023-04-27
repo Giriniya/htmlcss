@@ -1,0 +1,106 @@
+header{
+    min-width: 1200px;
+}
+
+/* 1단 */
+.top{
+    display: flex;
+    justify-content: space-between;
+    /* 양쪽정렬 */
+    width: 100%;
+    position: relative;
+}
+.top{height: 80px;}
+.top img{
+    width:100%;
+}
+/* 2단 */
+.nav{
+     
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* 양쪽정렬 */
+    align-items: center;
+    /* 세로중앙정렬 */
+    padding:10px;
+    border-bottom: 1px solid gray;
+    height:50px;
+}
+.left img{
+    height: 30px;
+    width:80%;
+    margin-left: 15px;
+}
+.middle{
+   
+    display: flex;
+    justify-content: space-between;
+    /* 양쪽정렬 */
+    align-items: center;
+    /* 세로중앙정렬 */
+    padding:10px;
+    height:50px;
+}
+.middle p{
+   
+    text-decoration: underline gray;
+    text-underline-position:under;
+}
+
+.right i{
+    margin: 5px;
+    align-items: center;
+}
+.right i p{
+    font-size:13px;
+    text-align: center;
+}
+.left2{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 세로중앙정렬 */
+    padding:10px;
+    margin-right: 350px;
+    margin-left: 15px;
+    height:30px;
+    width: 9%;
+   
+    border:1px solid black;
+}
+
+.left2 p{
+    font-size:13px;
+    text-align: left;
+    line-height: 30px;
+}
+
+/* 3단 */
+.bottom{
+ position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    /* 양쪽정렬 */
+    align-items: center;
+    /* 세로중앙정렬 */
+    padding:10px;
+    height:50px;
+    
+}
+.middle2{
+    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.middle2 p{
+    
+    margin:1px;
+    font-weight: bold;
+    padding:8px;
+    font-size: 15px;
+}
+

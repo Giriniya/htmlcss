@@ -1,24 +1,102 @@
 label{
     border:1px solid blue;
-    width:20px;
+    width:50px;
     display: block;
     margin:20px;
     cursor: pointer;
     /* 마우스 손모양 */
+    font-size: 30px;
+    text-align: center;
 }
-label span{
+/* label span{
     display: block;
     height: 3px;
     background: blue;
     border-radius: 2px;
     margin: 3px auto;
     width:90%
-}
+} */
 /* 박스제어하기 */
-ul{display: none;}
+ul{display: none;  }
 input:checked+ul{
     display: block;
 }
-ul>li::before{
+/* ul>li>a:before{
     content: '\1F60A';
+} */
+/* 서브메뉴디자인및 구현 */
+ul{
+    position: relative;
+    width: 250px;
+    /* height: 600px; */
 }
+ul>li{
+    background: rgb(19, 176, 19);
+    font-weight: bold;
+    padding: 5px;
+    height: 40px;
+}
+ul>li:not(:last-child){
+    /* border-bottom: 0.1px dashed white; */
+    box-shadow: 1px 1px 1px 1px white;
+}
+ul>li{
+    text-indent: 20px;
+}
+ul>li>a{
+    color: white !important;
+    display: block;
+}
+
+div.sub{
+    position:absolute;
+    left:100%;
+    top:0;
+}
+
+ul>li:hover{
+    background-color: lime;
+  
+}
+ul>li:hover>a{
+    /* text-shadow: 1px 1px black; */
+    color: rgb(13, 170, 13) !important;
+}
+
+div.sub{
+    display: none;
+    border:1px solid lightgray;
+}
+
+ul>li:hover>div.sub{
+    width: 1400px;
+    height: 248px;
+    display:flex;
+ 
+
+}
+/* 서브메뉴디자인 */
+div.sub section{
+    /* float: left; */
+flex:1;
+padding:10px;
+border-right:1px solid gray;}
+
+section>ol{
+    font-size: 0.9em;
+    font-weight: normal;
+    color:gray;
+}
+section>h3{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+section img{
+    width: 100%;
+    height: 100%;
+display: block;
+margin: auto;}
+
+.gm{width:80%;
+height: 70px;}
