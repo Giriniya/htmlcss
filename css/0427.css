@@ -1,0 +1,24 @@
+label{
+    border:1px solid blue;
+    width:20px;
+    display: block;
+    margin:20px;
+    cursor: pointer;
+    /* 마우스 손모양 */
+}
+label span{
+    display: block;
+    height: 3px;
+    background: blue;
+    border-radius: 2px;
+    margin: 3px auto;
+    width:90%
+}
+/* 박스제어하기 */
+ul{display: none;}
+input:checked+ul{
+    display: block;
+}
+ul>li::before{
+    content: '\1F60A';
+}

@@ -21,7 +21,7 @@ ol{
     /* opacity: 0;
     visibility: hidden; */
  }
-ol>li{ opacity: 0; float: left; }
+ol>li{ opacity: 0; float: left; left:100%;}
 
     ul>li:hover>ol>li{
         height: 40px; opacity: 1;
