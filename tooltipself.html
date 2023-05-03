@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltipself</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .tooltipa{ position: relative;}
+        .tooltip{
+        position:absolute;
+        background: sandybrown;
+        margin:30px;
+        padding: 10px;
+        text-align: center;
+        width:200px;
+        border-radius: 10px;
+        visibility: hidden; opacity: 0; transition: 1s;
+    
+        }
+        .tooltip b{
+            display: block;
+        }
+        
+        .tooltip:hover{
+            visibility: visible; opacity:1;
+        }
+        .tooltip::before{
+            content:''; display: block; width: 0; height: 0;
+            border:10px solid transparent; 
+        border-bottom:10px solid hotpink;
+        position:absolute; bottom:-20px; left:40px;
+        transform: rotate(180deg);
+        }
+        .tooltip:hover{font-weight: bold;}
+    </style>
+</head>
+<body>
+    <h1>풍선도움말</h1>
+    <div class="tooltipwrap">
+        <a href="#" class="tooltipa">
+        <span class="tooltip">
+            <b>hello hi seo hyun</b>
+        </span>
+    </a>
+    </div>
+    
+</body>
+</html>

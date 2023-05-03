@@ -1,0 +1,72 @@
+section{
+    border:1px solid;
+}
+
+section>div{
+    width:5px;
+    height:50px;
+    background-color: red;
+}
+
+section:hover>div:nth-child(1){
+    width:300px;
+    transition-duration:1s;
+
+}
+section:hover>div:nth-child(2){
+    width:400px;
+    transition-duration:1s;
+    transition-delay:0.5s;
+    background: blue;
+}
+section:hover>div:nth-child(3){
+    width:450px;
+    transition-duration:1s;
+    transition-delay:1.0s;
+    background: orange;
+    transition-property: width,background-color;
+}
+section:hover>div:nth-child(4){
+    width:300px;
+    transition-duration:1s;
+    transition-timing-function: cubic-bezier(.17,.67,.84,.24);
+ transition-timing-function: ease-in;
+ background:gold url('../imgs/back1.png') no-repeat left top scroll/50px;
+}
+
+section:hover>div:nth-child(5){
+    width:600px; background-color: tomato;
+    transition:all 1s 2s ease;
+    background-size: contain;
+}
+
+div>h1{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background:#00f;
+    animation-name: myani;
+    animation-duration: 1s;
+    position:relative;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+
+div:hover>h1{
+    animation-play-state: paused;
+}
+
+/* 애니메이션을 정의 */
+@keyframes myani{
+    from{
+        left:0;
+        background-color: red;
+    }
+    50%{
+        transform:rotate(360deg);
+    }
+    to{
+       left:400px;
+       background-color: blue;
+    }
+}

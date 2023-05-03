@@ -1,0 +1,155 @@
+/* 데스크탑 버젼 */
+@media screen and (min-width:800px){
+    
+    body{background: rgb(186, 223, 233);}
+    h1{ background:rgb(38, 120, 179);
+        width:900px;
+         margin: 20px auto;
+        color: black;
+        letter-spacing: 10px;
+        padding:10px;
+        text-align: left;
+    }
+    
+    body{
+        width: 900px;
+        margin: auto;
+    }
+    [class=content]{
+        float: left;
+        border:2px solid gray;
+        width:200px;
+        margin:10px;
+        padding: 10px;
+        line-height: 2;
+        height:350px;
+        box-sizing: border-box;
+        
+    }
+    [class=row]{
+    overflow:hidden;
+    margin:10px 10px;
+   
+    padding-left: 50px;
+    }
+    
+    h2{text-align:center;
+    border-bottom:3px solid teal;
+    
+    width:90%;
+    margin:auto;
+    margin-bottom: 20px;
+    color:teal;}
+    
+    ul>li{
+        text-indent:35px;
+        position: relative;
+    }
+    ul>li::before{
+        content:'\1F30E'; 
+        position:absolute;
+        left:-25px; top:0;
+    }
+    
+    ul>li:hover{
+        background:rgb(163, 231, 223);
+        cursor:pointer;
+        text-indent: 40px;
+        transition: 1s;
+    }
+    
+    .box:hover{
+        transform:scale(1.1);
+        transition:1s;
+    }
+    
+    ul>li:hover:before{
+        content:'\1F310';
+       
+    }
+    
+    .row{
+        overflow: visible !important;
+    }
+    
+    .row:after{
+        content:''; display:block; clear:both;
+    }
+    
+    }
+    
+    
+    /* 데스크탑 버젼 끝 */
+    
+    
+   
+    
+    /* 모바일 */
+    @media screen and (max-width:798px){
+        /* 1단 */
+        body{ background:  rgb(186, 223, 233);}
+        h1{
+           background: rgb(38, 120, 179);
+             margin: 20px auto;
+            color:black;
+            letter-spacing: 10px;
+            padding:10px;
+            text-align: left;
+            
+        }
+        
+        body{ 
+            margin: auto; 
+        }
+        [class=content]{
+            border:2px solid gray;
+            margin:10px;
+            padding: 10px;
+            line-height: 2;
+            box-sizing: border-box;
+          
+        }
+        [class=row]{
+        margin:10px 10px;
+        /* height:300px; */
+        padding-left: 50px;
+        }
+        
+        h2{text-align:center;
+        border-bottom:3px solid teal;
+        width:90%;
+        margin:auto;
+        margin-bottom: 20px;
+        color:teal;}
+        
+        ul>li{
+            text-indent:35px;
+            position: relative;}
+            
+        ul>li::before{
+                content:'\1F30E'; 
+                position:absolute;
+                left:-25px; top:0;
+            }
+            
+        
+   
+        ul>li:hover{
+            
+            background:rgb(163, 231, 223);
+            cursor:pointer;
+            text-indent: 40px;
+            transition: 1s;
+        }
+        
+        .box:hover{
+            transform:scale(1.1);
+            transition:1s;
+           
+        }
+        
+        ul>li:hover:before{
+            content:'\1F310'
+        }
+        
+    }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<style>
+    .swiper{
+        width:600px;
+        height: 400px;
+    }
+    .swiper img{width:100%; height:100%;}
+</style>
+
+</head>
+<body>
+    <h1>이미지 슬라이드 라이브러리 사용하기</h1>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./imgs/cat2.webp">
+          </div>
+          <div class="swiper-slide">
+            <img src="./imgs/dog.PNG">
+          </div>
+          <div class="swiper-slide">
+            <img src="./imgs/gm.PNG">
+          </div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    
+    
+      <!-- bx slider -->
+      <h2>bx slider 사용하기</h2>
+      // Slider HTML (change this to your own!)
+<ul class="slider">
+  <li><img src="./imgs/cat2.webp"></li>
+  <li><img src="./imgs/dog.PNG"></li>
+  <li><img src="./imgs/dog2.jpg"></li>
+</ul>
+
+
+
+
+      <script>
+        
+        const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  autoplay:{
+    delay:2500
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+      </script>
+
+<script>
+    //기본 호출
+    // $(document).ready(function(){
+    //   $('.slider').bxSlider();
+    // });
+
+$(document).ready(function(){
+	$('.slider').bxSlider({
+		auto: true,
+		speed: 1000,
+		pause: 1200,
+		mode:'fade',
+		autoControls: true,
+		pager:true,
+	});
+});
+</script>
+
+</body>
+</html>

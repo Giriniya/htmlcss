@@ -1,0 +1,233 @@
+#box1 {
+  color: red;
+}
+
+#box2 {
+  margin: 5px;
+}
+
+h1 {
+  color: blue;
+}
+
+body {
+  color: blue;
+  font-size: 16px;
+  font-family: serif;
+}
+
+ul {
+  font-size: 20px;
+  background: silver;
+}
+ul a {
+  color: red;
+}
+
+ul > li {
+  border: 3px solid;
+  margin: 10px;
+}
+ul {
+  border: 5px solid red;
+}
+
+ul > li {
+  border: 3px solid black;
+  margin: 30px;
+}
+ul > li:hover {
+  background: gold;
+}
+ul {
+  box-sizing: border-box;
+}
+
+#box1, #box1-title {
+  padding: 10px;
+}
+
+#box1 #box2 {
+  font-size: 20px;
+}
+#box1 #box2 > a {
+  color: red;
+}
+#box1 #box2 > a:hover {
+  color: blue;
+}
+
+.box1 .box2 .box3 {
+  padding: 20px;
+  background: lavender;
+}
+
+.box1 .box2 .box3 {
+  padding: 40px;
+  color: red;
+}
+
+@media screen and (max-width: 700px) {
+  #box1 {
+    font-size: 30px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #box1 {
+    font-size: 30px;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 500px) {
+  div.box3:hover {
+    background: blue;
+  }
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+
+p {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+
+div:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+span {
+  border: 1px solid blue;
+}
+
+span {
+  border: 1px solid red;
+}
+
+header {
+  width: 10;
+  height: 100;
+  border: 3px solid;
+}
+
+.box1 {
+  width: 100px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+.box2 {
+  width: 100px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+.c, .b, .a {
+  font-size: 16px;
+  color: blue;
+}
+
+.c, .b {
+  font-weight: bold;
+  background-color: gray;
+}
+
+.a {
+  font-weight: bold;
+  background-color: gray;
+}
+
+.b {
+  font-weight: bold;
+  background-color: gray;
+}
+
+.fs30, .z {
+  font-size: 30px;
+}
+
+.fw, .z {
+  font-weight: bold;
+}
+
+.main div, footer div {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+div:nth-child(1) {
+  font-size: 10px;
+}
+
+div:nth-child(2) {
+  font-size: 20px;
+}
+
+div:nth-child(3) {
+  font-size: 30px;
+}
+
+div:nth-child(4) {
+  font-size: 40px;
+}
+
+div:nth-child(5) {
+  font-size: 50px;
+}
+
+.ico_book {
+  background: url(imgs/book.png);
+}
+
+.ico_zoom {
+  background: url(imgs/zoom.png);
+}
+
+.ico_phone {
+  background: url(imgs/phone.png);
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+.btn {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30px;
+}
+
+.btn {
+  height: 30px;
+  line-height: 30px;
+  border: 3px solid red;
+}
+
+.btn {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+}
+
+.btn {
+  height: 30px;
+  line-height: 30px;
+  border: 3px solid red;
+}/*# sourceMappingURL=test.css.map */

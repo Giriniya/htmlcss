@@ -1,0 +1,44 @@
+.wrap{
+    border:1px dotted black;
+}
+header, section,footer,div{
+    border:1px solid;
+    margin:5px;
+}
+section>div{height: 200px;}
+footer{
+    height: 100px;
+}
+/* 태블릿 */
+@media(min-width:768px) {
+    section{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+
+    section div{
+        flex:1 1 30%;
+    }
+
+}
+
+/* pc */
+@media (min-width:1280px){
+    section{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+    .wrap section>div{
+        width:32%;
+    }
+
+    section>div:nth-child(4){
+       /* flex:1 1 32%; */
+    }
+    section div:nth-child(5){
+      flex:2 2 0;
+    }
+    
+}

@@ -1,0 +1,304 @@
+// 변수선언
+$color: red;
+$margin: 5px;
+$title-color: blue;
+
+#box1 {
+    color: $color;
+}
+
+#box2 {
+    margin: $margin;
+}
+
+h1 {
+    color: $title-color;
+}
+
+// 네스팅기법 nesting
+$font-size: 16px;
+$font-family: serif;
+
+body {
+    color: $title-color;
+
+    font: {
+        size: $font-size;
+        family: $font-family;
+    }
+}
+
+ul {
+    font-size: 20px;
+    background: silver;
+
+    a {
+        color: red;
+    }
+}
+
+// &  -> 자기 자신요소
+ul {
+    &>li {
+        border: 3px solid;
+        margin: 10px;
+    }
+
+    & {
+        border: 5px solid red;
+    }
+}
+
+$top: 30px;
+
+ul {
+    &>li {
+        border: 3px solid black;
+        margin: $top;
+
+        &:hover {
+            background: gold;
+        }
+    }
+
+    & {
+        box-sizing: border-box;
+    }
+}
+
+#box1 {
+
+    &,
+    &-title {
+        padding: 10px;
+    }
+}
+
+#box1 #box2 {
+    font-size: 20px;
+
+    &>a {
+        color: red;
+
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
+.box1 {
+    .box2 {
+        .box3 {
+            padding: 20px;
+            background: lavender;
+        }
+    }
+}
+
+.box1 {
+    .box2 .box3 {
+        padding: 40px;
+        color: red;
+    }
+}
+
+// media 쿼리
+#box1 {
+    @media screen and (max-width:700px) {
+        font-size: 30px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    #box1 {
+        font-size: 30px;
+        width: 50%;
+    }
+}
+
+div.box3 {
+    &:hover {
+        @media screen and (min-width:500px) {
+            background: blue;
+        }
+    }
+}
+
+// @mixin 함수 , @include 함수명
+@mixin test {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+
+div {
+    @include test()
+}
+
+p {
+    float: left;
+    @include test();
+}
+
+@mixin clear {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+div {
+    @include clear();
+}
+
+$border-color: blue;
+
+@mixin border($border-color) {
+    border: 1px solid $border-color;
+}
+
+span {
+    @include border($border-color)
+}
+
+span {
+    @include border(red);
+}
+
+@mixin box($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+header {
+    @include box(10, 100);
+    border: 3px solid;
+}
+
+@mixin pBox($w, $h, $b) {
+    width:if(unitless($w), #{$w}px, $w);
+    height:if(unitless($h), #{$h}px, $h);
+    border-radius: if(unitless($b), #{$b}px, $b);
+}
+
+.box1 {
+    @include pBox(100, 50, 30);
+}
+
+.box2 {
+    @include pBox(100px, 50px, 30px);
+}
+
+// @extend
+%name {
+    font-size: 16px;
+    color: blue;
+}
+
+%name2 {
+    font-weight: bold;
+    background-color: gray;
+}
+
+@mixin name($bold, $color) {
+    font-weight: $bold;
+    background-color: $color;
+}
+
+.a {
+    @extend %name;
+    @include name(bold, gray);
+}
+
+.b {
+    @extend %name;
+    @extend %name2;
+    @include name(bold, gray);
+}
+
+.c {
+    @extend %name;
+    @extend %name2;
+}
+
+.fs30 {
+    font-size: 30px;
+}
+
+.fw {
+    font-weight: bold;
+}
+
+.z {
+    @extend .fs30, .fw;
+}
+%m0auto{
+    width:1200px;
+    margin:0 auto;
+}
+footer{
+    div{
+        @extend %m0auto;
+    }
+}
+.main{
+    div{
+        @extend %m0auto;
+    }
+}
+// 반복문
+@for $i from 1 through 5{
+    div:nth-child(#{$i}){
+        font-size: 10px * $i;
+    }
+}
+// {  } 보간문자
+@each $var in book, zoom, phone{
+    .ico_#{$var}{
+        background:url(imgs/#{$var}.png) ;
+    }
+}
+
+$heading:(h1:30px, h2:20px, h3:15px);
+@each $a, $b in $heading{
+    #{$a}{
+        font-size: $b;
+    }
+}
+
+// 조건문
+@mixin btn_radius($h, $radius:false){
+    height:$h;
+    line-height: $h;
+   @if $radius{
+        border-radius:$h ;
+    }@else{
+        border:3px solid red;
+   }
+}
+
+.btn{
+    @include btn_radius(30px, true)
+}
+.btn{
+    @include btn_radius(30px, false)
+}
+
+@mixin btn_radius($h, $radius:true){
+    height:$h;
+    line-height: $h;
+    @if $radius{
+        border-radius: $h / 2;
+    }@else{
+        border:3px solid red;
+    }
+}
+
+.btn{
+    @include btn_radius(30px, true)
+}
+.btn{
+    @include btn_radius(30px, false)
+}

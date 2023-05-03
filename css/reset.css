@@ -8,3 +8,12 @@ a:link{color:black;}
 a:hover{text-decoration: none;}
 a:active{color: gray;}
 a:visited{color:green;}
+input, img{
+    vertical-align:baseline;
+}
+
+table{
+    /* 표테두리 단일실선 */
+    border-collapse:collapse;
+    border-spacing: 0;
+}

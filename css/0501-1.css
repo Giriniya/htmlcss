@@ -1,0 +1,95 @@
+/* 
+#box1{
+    width:100px;
+    height: 100px;
+    background: orange;
+    position: relative;
+    top:50px;
+    left:0px;
+    animation: box1_ani 3s alternate infinite;
+    margin:30px; 
+}
+
+#box2{
+    width:100px;
+    height: 100px;
+    background: orange;
+    position: relative;
+    top:50px;
+    left:200px;
+    animation: box2_ani 3s alternate infinite;
+    margin:30px; 
+}
+
+
+@keyframes box1_ani{
+    0%{left:0; background: orange;}
+    50%{top:100px; left:0px; background: blue;
+    transform: rotate(180deg);}
+    100%{left:200px; background: orange;
+    transform: rotate(360deg);}
+}
+
+@keyframes box2_ani{
+    0%{left:200px; background: orange;}
+    50%{left:100px; top:100px; background: blue;
+    transform: rotate(180deg);}
+    100%{left:0px; background: orange;
+    transform: rotate(360deg);}
+} */
+
+/* 이미지슬라이드 */
+.canvas{
+    width:500px; 
+    height:400px;
+    border:2px solid black;
+    position: relative;
+}
+
+.panel{
+    position: absolute;
+    left:0;
+    top:0;
+    width:2500px;
+}
+.panel>img{
+    width:500px;
+    height: 400px;
+    display: block;
+   
+}
+
+@keyframes slider{
+    from{ left:0;}
+    20%{left:-500px;}
+    40%{left:-100px;}
+    60%{left:-1500px;}
+    to{left:-2000px;}
+
+}
+
+.panel{
+    animation: slider 10s infinite alternate;
+}
+.canvas{overflow: hidden;}
+.canvas:hover>.panel{
+    animation-play-state:paused;
+}
+
+@keyframes slider2{
+    from{ top:0;}
+    20%{top:-400px;}
+    40%{top:-800px;}
+    60%{top:-1200px;}
+    to{top:-1600px;}
+
+}
+.canvas>.panel{
+    animation:slider2 10s infinite alternate;
+    border:3px solid red !important;
+}
+#canvas>.panel{
+    width:500px;
+}
+
+#canvas{overflow:visible;}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>wireframe01</title>
+ <link rel="stylesheet" href="css/reset.css">
+ <link rel="stylesheet" href="css/wide02.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+ <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+ <div class="skip">
+  <a href="#gonzi">공지사항</a>
+  <a href="#slider">슬라이더</a>
+  <a href="#banner">배너</a>
+  <a href="#gofirst">바로가기</a>
+ </div>
+ <header>
+  <div class="inner">
+   <h1> 로고</h1>
+   <nav>
+    <ul>
+     <li><a href="#">MENU1</a>
+      <div class="sub">
+       <ol>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+       </ol>
+       <ol>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+       </ol>
+       <ol>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+       </ol>
+       <ol>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+        <li>SubMenu-1</li>
+       </ol>
+      </div>
+     </li>
+     <li><a href="#">MENU2</a>
+      <div class="sub">
+       <ol>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+       </ol>
+       <ol>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+       </ol>
+       <ol>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+       </ol>
+       <ol>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+        <li>SubMenu-2</li>
+       </ol>
+      </div>
+
+     </li>
+     <li><a href="#">MENU3 </a>
+      <div class="sub">
+       <ol>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+       </ol>
+       <ol>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+       </ol>
+       <ol>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+       </ol>
+       <ol>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+       </ol>
+      </div>
+     </li>
+     <li><a href="#">MENU4</a>
+      <div class="sub">
+       <ol>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+       </ol>
+       <ol>
+        <li>SubMenu-4</li>
+        <li>SubMenu-4</li>
+        <li>SubMenu-4</li>
+        <li>SubMenu-4</li>
+       </ol>
+       <ol>
+        <li>SubMenu-4</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+       </ol>
+       <ol>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+        <li>SubMenu-3</li>
+       </ol>
+      </div>
+     </li>
+    </ul>
+   </nav>
+  </div>
+ </header>
+ <div id="content">
+  <!-- Slider main container -->
+  <div class="swiper" id="slider">
+   <!-- Additional required wrapper -->
+   <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="./imgs/dog.PNG"></div>
+    <div class="swiper-slide"><img src="./imgs/dog2.jpg"></div>
+    <div class="swiper-slide"><img src="./imgs/gm.PNG"></div>
+    ...
+   </div>
+   <!-- If we need pagination -->
+   <div class="swiper-pagination"></div>
+
+   <!-- If we need navigation buttons -->
+   <div class="swiper-button-prev"></div>
+   <div class="swiper-button-next"></div>
+
+   <!-- If we need scrollbar -->
+   <div class="swiper-scrollbar"></div>
+  </div>
+  <div class="row">
+   <article id="gongzi">공지사항/갤러리</article>
+   <article>배너</article>
+   <article id="gofirst">바로가기</article>
+  </div>
+ </div>
+ <footer>
+  <div class="inner">
+   <h3>로고</h3>
+   <div class="bottom">
+    <p>하단메뉴</p>
+    <address>Copyright</address>
+   </div>
+  </div>
+ </footer>
+ <script>
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true
+  },
+  autoplay:{
+   delay:2500,
+   disabbleOnInteration:false
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+ </script>
+</body>
+
+</html>
