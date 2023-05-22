@@ -1,0 +1,139 @@
+/* 디자인 */
+#main_header {
+    height: 60px;
+    line-height: 60px;
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+    background: steelblue;
+    color: white;
+
+}
+
+/* 네비게이션 배치 */
+#main_gnb {
+    border-bottom: 1px solid black;
+    background: darkblue;
+    overflow: hidden;
+}
+
+#main_gnb ul {}
+
+#main_gnb ul.left {
+    float: left;
+}
+
+#main_gnb ul.right {
+    float: right;
+}
+
+
+#main_gnb ul li {
+    float: left;
+}
+
+
+/* a태그 레이아웃과 색상설정 */
+#main_gnb ul li a {
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    font-weight: bold;
+}
+
+/* 최소너비 지정 */
+#wrap {
+    min-width: 760px;
+    /* max-width: 1280px; */
+    margin: auto;
+}
+
+/* 컨텐츠 레이아웃 */
+#wrap_content {
+    overflow: hidden;
+}
+
+#main_lnb {
+    float: left;
+    width: 200px;
+}
+
+#content_wrap {
+    float: left;
+    border: 1px solid;
+    padding: 10px;
+    box-sizing: border-box;
+    /* width:calc(100% - 200px); */
+    /* margin-right: -200px;
+    width: 100%;
+    padding-right:200px; */
+
+}
+
+#wrap_content {
+    display: flex;
+}
+
+#content_wrap {
+    flex: 1;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* 디자인 */
+#wrap_content {
+    background: ivory;
+}
+
+#main_lnb {
+    background: steelblue;
+}
+
+#main_lnb>ul>li>a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    color: white;
+    font-weight: bold;
+}
+
+/* 푸터디자인 */
+#main_footer{
+    padding:10px;
+    border-top:3px solid;
+    text-align: center;
+
+}
+
+/* 아코디언 구현 */
+/* height 0 -> 50px? 시간차로 커지게 한다. */
+#main_lnb div{
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+#main_lnb div:target{
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
+#main_lnb div p{
+    height:0;
+    transition:0.5s;
+}
+#main_lnb div:target p{
+    height: 35px;
+    color: black;
+    line-height: 35px;
+    text-indent: 20px;
+
+}
+#main_lnb div:target p a{
+    color:black;
+}

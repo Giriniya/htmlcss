@@ -1,0 +1,129 @@
+
+
+/* 컨텐츠 레이아웃 */
+#wrap_content {
+    overflow: hidden;
+}
+
+#main_lnb {
+    float: left;
+    width: 200px;
+    
+}
+
+#content_wrap {
+    float: left;
+    border: 1px solid;
+    padding: 10px;
+    box-sizing: border-box;
+    /* width:calc(100% - 200px); */
+    /* margin-right: -200px;
+    width: 100%;
+    padding-right:200px; */
+
+}
+
+#wrap_content {
+    display: flex;
+}
+
+#content_wrap {
+    flex: 1;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* 디자인 */
+#wrap_content {
+    background: gold;
+    margin: auto;
+    height: 800px;
+    
+}
+
+#main_lnb {
+    background:  #ff6f61;
+    border-radius: 10%;
+    overflow: hidden;
+    margin: auto;
+    margin-top:20px;
+}
+
+#main_lnb>ul>li>a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    color: white;
+    font-weight: bold;
+  
+
+}
+
+#main_lnb>ul>li:nth-of-type(1)>a{
+    border-bottom: 1px solid white;
+}
+
+#main_lnb>ul>li:nth-of-type(2)>a{
+    border-bottom: 1px solid white;
+}
+
+#main_lnb>ul>li:nth-of-type(3)>a{
+    border-bottom: 1px solid white;
+}
+
+#main_lnb>ul>li:nth-of-type(4)>a{
+    border-bottom: none;
+}
+
+#main_lnb>li:last-child{border-radius: 10%;
+overflow: hidden;}
+
+
+
+
+/* 아코디언 구현 */
+/* height 0 -> 50px? 시간차로 커지게 한다. */
+#main_lnb div{
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+#main_lnb div:target{
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+    background: rgb(48, 48, 118);
+}
+
+#main_lnb div p{
+    height:0;
+    transition:0.5s;
+}
+#main_lnb div:target p{
+    height: 35px;
+    color: white;
+    line-height: 35px;
+    text-indent: 20px;
+
+}
+#main_lnb div:target p a{
+    color:white;
+
+}
+#main_lnb div:target span{
+    display: block;
+    border-bottom: 1px solid  #a48f8e;
+}
+
+i{
+    float: right;
+    margin-top: 12px;
+    margin-right:10px;
+}
+
+
+
+
+

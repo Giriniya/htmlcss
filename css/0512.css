@@ -1,0 +1,151 @@
+.multi{
+    /* column-count: 3; */
+    padding:10px;
+
+    column-gap: 20px;
+    column-rule-color: red;
+    column-rule-style: solid;
+    column-rule-width:5px ;
+
+    column-rule:5px dotted blue;
+
+    column-width: 120px;
+
+}
+
+.multi:hover p{
+    column-span:all;
+}
+
+.charts{
+    display: flex;
+    justify-content: center;
+}
+
+svg{
+    width:220px;
+    height:220px;
+}
+svg circle{
+    /* 면색 */
+    fill:gray;
+    /* 선색 */
+     stroke: orange;
+    stroke-width: 20;
+
+    stroke-dasharray: 630;
+    stroke-dashoffset: 50;
+    stroke-linecap: round;
+}
+
+@keyframes line1{
+    from{
+        stroke-dashoffset: 630;
+    }
+    to{
+        stroke-dashoffset: 200;
+    }
+}
+
+.chart circle{
+    animation:line1 alternate infinite;
+    animation: line1 2s forwards;
+}
+
+/* fowards는 애니메이션 끝에서 정지 */
+
+@keyframes line2{
+    from{
+        stroke-dashoffset: 630;
+    }
+    to{
+        stroke-dashoffset: 100;
+    }
+}
+
+.chart:nth-child(2) circle{
+
+    animation: line2 3s forwards;
+    stroke: pink;
+}
+
+@keyframes line3{
+    from{
+        stroke-dashoffset: 630;
+    }
+    to{
+        stroke-dashoffset: 50;
+    }
+}
+
+.chart:nth-child(3) circle{
+
+    animation: line3 2s alternate infinite;
+    stroke: mediumaquamarine;
+}
+
+
+ul{
+    display: flex;
+    margin:30px;
+}
+ul>li{
+    border: 1px solid;
+    text-align: center;
+    text-transform: uppercase;
+}
+ul>li>a{
+    padding:10px;
+    display: block;
+}
+
+/* 기본상태에서 영문글자가 나오고 */
+/* 마우스올리면 한글글자가 나오게 하기 */
+/* 첫번째 글자만 보이고 두번째 글자는 숨기고
+마우스 올리면 첫번재 글자 숨기고 두번째 글자 보이게한다. */
+
+ul>li>a>span:first-child(1){
+    display: block;
+}
+ul>li>a>span:last-child{
+    display: none;
+}
+
+ul>li>a:hover>span:first-child{
+    display: none;
+}
+ul>li>a:hover>span:last-child{
+    display: block;
+}
+
+ul{width: 500px;}
+ul>li{flex:1;}
+
+
+
+
+ol>li>a>img:first-child(1){
+    display: block;
+}
+ol>li>a>img:last-child{
+    display: none;
+}
+
+ol>li>a:hover>img:first-child{
+    display: none;
+}
+ol>li>a:hover>img:last-child{
+    display: block;
+}
+
+ol{
+    display: flex;
+    margin:100px;
+    width: 2000px;
+border: 1px solid black;}
+
+img{
+    margin: 100px;
+    padding: 10px;
+    border:1px solid black;
+}

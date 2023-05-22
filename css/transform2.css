@@ -1,0 +1,153 @@
+.wrap-box{
+    /* 디자인 */
+    background-color: silver;
+    width:250px; height: 250px;
+    padding: 10px;
+    box-shadow: 0 0 0 black;
+    position:relative;
+    transform:translateY(0) translateX(0);
+    /* 이동하기 */
+    transition:1.0s;
+    /* 시간지정 */
+    margin:30px;
+}
+.wrap-box:hover{
+    box-shadow: 20px 20px 0 black;
+    transform: translateY(-10px) translateX(-10px);
+                /* 좌측상단으로 이동 */
+}
+/* 테두리 동적인 효과주기 */
+.wrap-box::before,.wrap-box::after{
+    content:'';
+    width:100%; height:5px;
+    background-color: blue;
+    display: block;
+    transform:  scaleX(0);
+    transition: 1s;
+    position: absolute;
+    
+}
+.wrap-box::before{
+    left:0; top:0;
+    transform-origin: 0 0;
+    /* 기준점 설정 */
+}
+
+.wrap-box:hover:before{
+    transform: scaleX(1);
+   
+}
+.wrap-box::after{
+    left:0; bottom:0;
+    transform-origin: 100% 0;
+    /* 기준점 설정 */
+}
+
+.wrap-box:hover::after{
+    transform: scaleX(1);
+   
+}
+
+.box::before, .box::after{
+    content:'';
+    position:absolute;
+    width: 5px; height: 100%;
+    background: blue;
+    transform:scaleY(0);
+    transition:1s 1s;
+    /* 전이시간 지연시간 */
+}
+
+.box::after{
+    top:0; right:0;
+    transform-origin: 0 0;
+}
+
+.box::before{
+    left:0; top:0;
+    transform-origin: 0 100%;
+}
+
+.wrap-box{display: flex;}
+
+.box{
+    background: gold;
+    padding: 20px;
+    width:200px; height:200px;
+    margin: auto;
+}
+
+.box:hover::before, .box:hover:after{
+    transform:scaleY(1);
+}
+
+
+/* 회전목마 */
+#viewport{position: relative;
+border:1px solid; margin:100px; height: 400px;
+}
+
+
+#wheel{
+    position: absolute;
+}
+
+div.item{
+    width:200px; height: 200px;
+    border:3px solid black;
+    background: lime;
+    position: absolute;
+}
+body{perspective: 1000px;}
+#viewport{transform-style:preserve-3d;}
+#wheel{transform-style: preserve-3d; left:50%; top:10%;
+border:3px solid red; height: 500px;}
+:root{--widthA:200px;}
+/* root선택자에 변수 widthA를 선언한다 */
+
+.item:nth-child(1){transform:rotateY(0) translateZ(var(--widthA));}
+.item:nth-child(2){transform:rotateY(60deg) translateZ(var(--widthA));}
+.item:nth-child(3){transform:rotateY(120deg) translateZ(var(--widthA));}
+.item:nth-child(4){transform:rotateY(180deg) translateZ(var(--widthA));}
+.item:nth-child(5){transform:rotateY(240deg) translateZ(var(--widthA));}
+.item:nth-child(6){transform:rotateY(300deg) translateZ(var(--widthA));}
+
+/* 사진넣기 */
+.item:nth-child(1){
+    background: url('../imgs/ohoh.jpg') no-repeat left top / cover;
+}
+.item:nth-child(2){
+    background: url('../imgs/kazha.webp');
+    background-size: 100% 100%;
+}
+
+.item:nth-child(3){
+    background: url('../imgs/juju.jpg') no-repeat left top / cover;
+}
+
+.item:nth-child(4){
+    background: url('../imgs/seo.jpg') no-repeat left top / cover;
+}
+
+.item:nth-child(5){
+    background: url('../imgs/ejang.jpg') no-repeat left top / cover;
+}
+
+.item:nth-child(6){
+    background: url('../imgs/pobi.jpg') no-repeat left top / cover;
+}
+
+.item:hover{ transition: 1s; transform: rotate(0) scale(1.5);}
+
+/* 애니메이션 회전하기 */
+@keyframes myani {
+    from{transform:rotateX(-5deg) rotate(0deg);}
+    to{transform: rotateX(-5deg) rotateY(360deg);}
+}
+
+#wheel{ animation: myani 20s infinite alternate;
+border:10px double red;
+box-shadow: 3px 3px black, -3px -3px 3px black;}
+
+/* 변수를 --widthA ->0 */
+.item{left:-100px; top:100px;}

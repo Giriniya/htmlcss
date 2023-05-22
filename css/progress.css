@@ -1,0 +1,68 @@
+.progress{
+    margin:3px;
+    position: relative;
+}
+
+
+.bar{
+    display: block;
+    background: gray;
+    width:90%;
+    height: 30px;
+    padding:4px;
+    
+}
+
+.pro_bar{
+    display: block;
+    background: gold;
+    width:100%;
+    height:29px;
+   
+}
+
+.progress_1:checked>{
+    width:20%;
+}
+
+/* 진행바 만들기 */
+.container{
+    margin:50px;
+}
+.progress{
+    padding: 5px;
+    background: #333;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 1px #ddd, 0 1px #ccc;
+    margin:10px;
+    position: relative;
+}
+
+.progress-bar{
+    height:26px;
+    border-radius: 5px;
+    background: orange;
+    transition:0.5s;
+    box-shadow: 0 0 1px 1px #eee;
+}
+
+#first:checked~.progress>.progress-bar{
+    width:5%;
+    background: orange;
+}
+#second:checked~.progress>.progress-bar{
+    width:25%;
+    background: gold;
+}
+#sam:checked~.progress>.progress-bar{
+    width:50%;
+    background: lime;
+}
+#four:checked~.progress>.progress-bar{
+    width:75%;
+    background: steelblue;
+}
+#five:checked~.progress>.progress-bar{
+    width:100%;
+    background: chocolate;
+}

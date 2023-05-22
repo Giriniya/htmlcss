@@ -1,5 +1,6 @@
 /* reset.css */
-*{margin:0; padding:0;}
+*{margin:0; padding:0; 
+-webkit-text-size-adjust: none;}
 a{text-decoration: none; color:black;}
 li{list-style: none;}
 table{border-collapse: collapse;}
@@ -12,8 +13,13 @@ input, img{
     vertical-align:baseline;
 }
 
+img,fieldset{border:0;}
 table{
     /* 표테두리 단일실선 */
     border-collapse:collapse;
     border-spacing: 0;
 }
+
+address{font-style: normal;}
+textarea{resize:none;}
+label{cursor: pointer;}
